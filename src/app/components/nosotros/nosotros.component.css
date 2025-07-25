@@ -1,0 +1,18 @@
+.nosotros-container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 32px;
+  background: #e3f2fd;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.nosotros-container h2 {
+  color: #1976d2;
+  margin-bottom: 16px;
+}
+
+.nosotros-container p {
+  color: #333;
+  font-size: 1.1rem;
+}
