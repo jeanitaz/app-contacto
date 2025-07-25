@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Productos } from './productos';
 
 @Component({
   selector: 'app-productos',
@@ -7,13 +8,15 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./productos.component.css']
 })
 export class ProductosComponent implements OnInit {
-  productos: any[] = [];
+    constructor(private http: HttpClient) {
 
-  constructor(private http: HttpClient) {}
+  }
+  Productos: Productos[] = [];
 
-  ngOnInit() {
-    this.http.get<any[]>('assets/productos.json').subscribe(data => {
-      this.productos = data;
+  ngOnInit(){
+    this.http.get<Productos[]>('assets/productos.json').subscribe(data => {
+      this.Productos = data;
+      console.log(this.Productos);
     });
   }
 }

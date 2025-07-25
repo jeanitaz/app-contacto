@@ -7,19 +7,19 @@
                     <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                         <tr>
                             <th scope="col" class="px-4 py-3">Nombre</th>
-                            <th scope="col" class="px-4 py-3">Edad</th>
-                            <th scope="col" class="px-4 py-3">Profesión</th>
+                            <th scope="col" class="px-4 py-3">Imagen</th>
+                            <th scope="col" class="px-4 py-3">Descripción</th>
                             <th scope="col" class="px-4 py-3">
                                 <span class="sr-only">Actions</span>
                             </th>
                         </tr>
                     </thead>
                     <tbody>
-                        @for(usuario of productos; track usuario.id){
+                        @for(productos of Productos; track productos.id){
                         <tr class="border-b dark:border-gray-700">
-                            <td class="px-4 py-3">{{usuario.nombre}}</td>
-                            <td class="px-4 py-3">{{usuario.edad}}</td>
-                            <td class="px-4 py-3">{{usuario.carrera}}</td>
+                            <td class="px-4 py-3">{{productos.nombre}}</td>
+                            <td class="px-4 py-3">{{productos.imagen}}</td>
+                            <td class="px-4 py-3">{{productos.descripcion}}</td>
                             <td class="px-4 py-3 flex items-center justify-end">
                                 <button id="apple-imac-27-dropdown-button" data-dropdown-toggle="apple-imac-27-dropdown" class="inline-flex items-center p-0.5 text-sm font-medium text-center text-gray-500 hover:text-gray-800 rounded-lg focus:outline-none dark:text-gray-400 dark:hover:text-gray-100" type="button">
                                     <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
