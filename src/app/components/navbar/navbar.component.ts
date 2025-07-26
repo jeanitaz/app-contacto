@@ -9,5 +9,5 @@ import { RouterLink } from '@angular/router';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
-
+  imagen = 'https://i.postimg.cc/L4P8zSwZ/Chat-GPT-Image-26-jul-2025-18-13-29-removebg-preview.png';
 }

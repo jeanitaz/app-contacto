@@ -14,7 +14,7 @@ export class ProductosComponent implements OnInit {
   Productos: Productos[] = [];
 
   ngOnInit(){
-    this.http.get<Productos[]>('assets/productos.json').subscribe(data => {
+    this.http.get<Productos[]>('assets/produtos.json').subscribe(data => {
       this.Productos = data;
       console.log(this.Productos);
     });

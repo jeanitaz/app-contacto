@@ -1,138 +1,163 @@
 .home-container {
-  max-width: 950px;
-  margin: 60px auto 0 auto;
-  padding: 0;
-  background: none;
-  display: flex;
-  align-items: stretch;
-  gap: 0;
-  box-shadow: none;
-  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
-}
-
-.home-card {
-  background: rgba(20, 30, 48, 0.98);
-  border-radius: 20px 0 0 20px;
-  box-shadow: 0 8px 32px rgba(0, 255, 255, 0.10), 0 1.5px 8px rgba(0,0,0,0.08);
-  padding: 48px 40px 48px 56px;
-  flex: 1 1 60%;
+  background-image: url('https://i.pinimg.com/originals/96/ac/0d/96ac0d507e1855c117cfd489d903efa4.gif');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  width: 100vw;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  color: #e0f7fa;
-  border-right: 4px solid #00e5ff;
-  position: relative;
-  overflow: hidden;
-}
-
-.home-card::before {
-  content: '';
-  position: absolute;
-  top: -60px;
-  left: -60px;
-  width: 180px;
-  height: 180px;
-  background: radial-gradient(circle, #00e5ff 0%, transparent 70%);
-  opacity: 0.18;
-  z-index: 0;
-}
-
-.home-card h1 {
-  color: #00e5ff;
-  font-size: 2.5rem;
-  font-weight: 800;
-  margin-bottom: 18px;
-  letter-spacing: 1px;
-  position: relative;
-  z-index: 1;
-  text-shadow: 0 0 8px #00e5ff80;
-}
-
-.home-card h1::after {
-  content: '';
-  display: block;
-  width: 60px;
-  height: 4px;
-  background: linear-gradient(90deg, #00e5ff 60%, #00bcd4 100%);
-  border-radius: 2px;
-  margin-top: 8px;
-}
-
-.home-card p {
-  color: #b2ebf2;
-  font-size: 1.18rem;
-  line-height: 1.8;
-  margin-bottom: 0;
-  margin-top: 12px;
-  z-index: 1;
-  position: relative;
-}
-
-.home-img {
-  flex: 1 1 40%;
-  background: linear-gradient(135deg, #00e5ff 60%, #263238 100%);
-  border-radius: 0 20px 20px 0;
-  display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 320px;
-  min-height: 320px;
+  font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
-.home-img::after {
+.home-container::before {
   content: '';
   position: absolute;
-  bottom: -40px;
-  right: -40px;
-  width: 160px;
-  height: 160px;
-  background: radial-gradient(circle, #00e5ff 0%, transparent 70%);
-  opacity: 0.13;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(120deg, rgba(0,255,255,0.08) 0%, rgba(0,0,0,0.7) 100%);
   z-index: 0;
 }
 
-.home-img img {
-  width: 90%;
-  max-width: 340px;
-  height: 240px;
-  object-fit: cover;
-  border-radius: 16px;
-  box-shadow: 0 4px 32px #00e5ff33, 0 2px 12px #26323833;
-  border: 4px solid #fff;
-  z-index: 1;
+.home-container > div {
   position: relative;
+  z-index: 1;
 }
 
-@media (max-width: 1000px) {
-  .home-container {
-    flex-direction: column-reverse;
+.home-card, .home-container > div:first-child {
+  background: rgba(20, 30, 48, 0.82);
+  border-radius: 22px;
+  box-shadow: 0 8px 32px 0 #00fff7a0, 0 1.5px 8px #00e5ff33;
+  padding: 2.5rem 2rem 2rem 2rem;
+  margin-bottom: 2.2rem;
+  max-width: 1080px;
+  backdrop-filter: blur(10px) saturate(120%);
+  border: 2px solid #00fff7;
+  transition: transform 0.22s, box-shadow 0.22s;
+  text-align: center;
+}
+.home-card:hover, .home-container > div:first-child:hover {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 16px 48px 0 #00fff7cc;
+}
+.home-card h1, .home-container h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 1.2rem;
+  letter-spacing: 2px;
+  color: #00fff7;
+  text-shadow: 0 0 16px #00fff7, 0 1px 0 #fff;
+  font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif;
+}
+.home-card p, .home-container p {
+  font-size: 1.13rem;
+  color: #e0f7fa;
+  margin-bottom: 0.7rem;
+  text-shadow: 0 1px 8px #000;
+}
+.home-btn {
+  display: inline-block;
+  margin-top: 1.2rem;
+  padding: 0.7rem 2.2rem;
+  background: linear-gradient(90deg, #00fff7 0%, #00bcd4 100%);
+  color: #181c2f;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 16px #00fff7a0;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  text-decoration: none;
+}
+.home-btn:hover {
+  background: linear-gradient(90deg, #00bcd4 0%, #00fff7 100%);
+  color: #fff;
+  transform: scale(1.06);
+}
+
+.home-categorias {
+  margin: 2.5rem 0 1.5rem 0;
+  text-align: center;
+}
+.home-categorias h2 {
+  color: #00fff7;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  letter-spacing: 1px;
+  text-shadow: 0 0 8px #00fff7;
+}
+.categorias-list {
+  display: flex;
+  justify-content: center;
+  gap: 2.2rem;
+  flex-wrap: wrap;
+}
+.categoria-item {
+  background: rgba(0,255,255,0.08);
+  border: 1.5px solid #00fff7;
+  border-radius: 16px;
+  padding: 1.1rem 1.5rem;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 12px #00fff733;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: background 0.2s, transform 0.2s;
+}
+.categoria-item:hover {
+  background: rgba(0,255,255,0.18);
+  transform: scale(1.07);
+}
+.cat-icon {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 8px #00fff7;
+}
+
+.home-ventajas {
+  display: flex;
+  justify-content: center;
+  gap: 2.2rem;
+  margin: 2.5rem 0 1.5rem 0;
+  flex-wrap: wrap;
+}
+.ventaja-item {
+  background: rgba(0,255,255,0.08);
+  border: 1.5px solid #00fff7;
+  border-radius: 16px;
+  padding: 1.1rem 1.5rem;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 12px #00fff733;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: background 0.2s, transform 0.2s;
+}
+.ventaja-item:hover {
+  background: rgba(0,255,255,0.18);
+  transform: scale(1.07);
+}
+.ventaja-icon {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 8px #00fff7;
+}
+
+@media (max-width: 900px) {
+  .categorias-list, .home-ventajas {
+    flex-direction: column;
+    gap: 1.2rem;
     align-items: center;
-    gap: 0;
-  }
-  .home-card, .home-img {
-    border-radius: 20px;
-    min-width: unset;
-    min-height: unset;
-    width: 100%;
-    padding: 32px 18px;
-  }
-  .home-img {
-    border-radius: 20px 20px 0 0;
-    padding: 24px 0;
-  }
-}
-
-@media (max-width: 600px) {
-  .home-card h1 {
-    font-size: 2rem;
-  }
-  .home-card {
-    padding: 24px 8px;
-  }
-  .home-img img {
-    max-width: 95%;
-    height: auto;
   }
 }
